@@ -1,3 +1,3 @@
 export default function Home() {
-  return <>하이</>;
+  return <>로그인 페이지 만들어야함.</>;
 }
