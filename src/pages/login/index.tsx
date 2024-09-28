@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LoginForm from "@/components/login/LoginForm";
 
 const Login = () => {
   return (
@@ -10,26 +10,7 @@ const Login = () => {
       </header>
 
       <main>
-        <form>
-          <label htmlFor="email">이메일</label>
-          <input
-            id="email"
-            type="text"
-            name="eamil"
-            placeholder="아이디를 입력하세요"
-          />
-          <label htmlFor="password">비밀번호</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            placeholder="비밀번호를 입력하세요"
-          />
-          <button>로그인</button>
-          <span>
-            회원이 아니신가요? <Link href={"/signup"}>회원가입하기</Link>
-          </span>
-        </form>
+        <LoginForm />
       </main>
 
       <footer>
