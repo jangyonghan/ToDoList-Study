@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useState } from "react";
 import InputField from "../common/InputField";
 import { validateEmail, validatePassword } from "@/utils/validation";
@@ -53,9 +52,6 @@ const LoginForm = () => {
       )}
 
       <button type="submit">로그인</button>
-      <span>
-        회원이 아니신가요? <Link href="/signup">회원가입하기</Link>
-      </span>
     </form>
   );
 };

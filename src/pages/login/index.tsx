@@ -1,4 +1,5 @@
 import LoginForm from "@/components/login/LoginForm";
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -11,6 +12,9 @@ const Login = () => {
 
       <main>
         <LoginForm />
+        <span>
+          회원이 아니신가요? <Link href="/signup">회원가입하기</Link>
+        </span>
       </main>
 
       <footer>
