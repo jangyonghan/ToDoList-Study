@@ -20,3 +20,16 @@ export const validateEmail = (email: string): boolean => {
 export const validatePassword = (password: string): boolean => {
   return passwordRegEx.test(password);
 };
+
+/**
+ * 비밀번호와 비밀번호 확인 값이 동일한지 확인하는 함수
+ * @param password - 입력한 비밀번호 값
+ * @param rePassword - 입력한 비밀번호 확인 값
+ * @returns {boolean} 동일하면 true, 동일하지 않으면 false
+ */
+export const validatePasswordMatch = (
+  password: string,
+  rePassword: string
+): boolean => {
+  return password === rePassword;
+};
