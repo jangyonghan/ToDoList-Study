@@ -3,9 +3,6 @@ import InputField from "../common/InputField";
 import { validateEmail, validatePassword } from "@/utils/validation";
 import styled from "styled-components";
 
-// 버튼 스타일,
-// 로그인 검증 텍스트 스타일,
-
 const Button = styled.button`
   background-color: #5534da;
   width: 520px;
@@ -13,9 +10,15 @@ const Button = styled.button`
   color: #ffffff;
   font-size: 18px;
   border-radius: 6px;
+  display: block;
+  border: none;
 `;
 
-const validationError = styled.span``;
+const ValidationError = styled.span`
+  font-size: "14px";
+  color: #d6173a;
+  margin-top: 8px;
+`;
 
 const LoginForm = () => {
   const [email, setEmail] = useState<string>("");
@@ -50,7 +53,7 @@ const LoginForm = () => {
         title="아이디"
       />
       {emailErr && (
-        <span style={{ color: "red" }}>유효하지 않은 이메일입니다.</span>
+        <ValidationError>유효하지 않은 이메일입니다.</ValidationError>
       )}
 
       <InputField
@@ -63,7 +66,7 @@ const LoginForm = () => {
         title="비밀번호"
       />
       {passwordErr && (
-        <span style={{ color: "red" }}>유효하지 않은 비밀번호입니다.</span>
+        <ValidationError>유효하지 않은 비밀번호입니다.</ValidationError>
       )}
 
       <Button type="submit">로그인</Button>
